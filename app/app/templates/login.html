@@ -1,0 +1,11 @@
+{% extends 'res.html' %}
+  
+{% block title %}Login{% endblock %}
+  
+{% block sign %}
+  <form action='login_request' method=POST >
+    {% csrf_token %}
+
+    <button type="submit" class="btn btn-primary">Login</button>
+  </form>
+{% endblock %}

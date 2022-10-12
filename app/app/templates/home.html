@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="header">
+<header>
+    <h1> <font face = "Verdana" font size ="15" >Hi {{msg}}{{res}}, Welcome to Rollz Ice Cream!</font></h1>
+</header>
+</div>
+
+<a href="storeTotalSales" style="background:darkcyan; " class="button button1">Store Total Sales</a><br>
+<br>
+<a href="monthWiseTotalSales" style="background:darkcyan;" class="button button2">Month Wise Sales</a><br>
+<br>
+<a href="mostRevenue" style="background:darkcyan;" class="button button3">Most Revenue</a><br>
+<br>
+<a href="mostPopularItem" style="background:darkcyan;" class="button button4">Most Popular Item(MPI)</a><br>
+<br>
+<a href="popularMaxMinAvg" style="background:darkcyan;" class="button button5">Min Max Avg sale of MPI</a><br>
+  
+{% endblock%}

@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>Login</title>
+        <style>
+            body {
+                background-image: url('https://antdisplay.com/pub/media/magefan_blog/1_19_.jpg');
+                background-repeat: no-repeat;
+                background-size: 1500px 860px;
+                color: #FFFFFF;
+            }
+            button{
+                background-color: #4CAF50;
+                width: 25%;
+                padding: 15px;
+                color: black;
+                border: none;
+                float: center;
+                font-size: 15px;
+            }
+            label{
+                font-size: 30px;
+            }
+    
+            input[type=email],input[type=text],input[type=password], input[type = number]{                              
+                width: 50%;
+                font-size: 15px;
+                margin: 8px 0px;
+                padding: 12px 20px;
+                display: inline-block;
+                border: 2px solid green;
+                box-sizing: border-box;
+            }
+            
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+            }
+            input[type=radio]{
+                height: 18px;
+                width: 18px;
+            }
+            button:hover{
+                opacity:0.7;
+            }
+            .container{
+                width: 555px;
+                height:120px;
+                padding: 140px 10px;               
+                background-color: rgba(255, 255, 255, 0.87);
+            }
+            .imgcontainer {
+                text-align: center;
+                margin: 24px 0 12px 0;
+            }
+              
+            img.avatar {
+                width: 10%;
+                border-radius: 50%;
+            }  
+            .outer{
+                background:rgb(212, 212, 205);
+                width:300px;
+                height:40px;
+                margin:1.5em;
+            } 
+            #thank-you-message {
+                display: none;
+              }
+              
+              #thank-you-message.show {
+                display: block;
+              }      
+        </style>
+<center><div class = "outer" >
+   <p style="font-family:'verdana' ; color:rgb(32, 28, 28); font-size:28px">Login User</p>
+</div>
+<form  action='login_request' method=POST>
+    {% csrf_token %}
+     <center><div class="container">
+                <label for='user_name'><b style="color:rgb(0, 0, 0)">User Name : </b></label>
+                <input type='text' placeholder="Enter your user name" name='user_name' required><br>
+            	<label for='password'><b style="color:rgb(0, 0, 0)">Password : </b></label>
+            	<input type="password" placeholder="Enter Password" name="password" required><br> 
+            	<br>
+        
+                <button type="submit"  ><b>Login</b></button >
+                </a> 
+                <br>
+                <br>
+                <b style="color:rgb(0, 0, 0); font-size:20px">Don't have an account </b><a style="font-family:'verdana' ; color:rgb(7, 38, 140); font-size:18px" href="/"> Signup </a>
+                <br>
+                <br>
+            	
+            </div></center>
+</form>
+
